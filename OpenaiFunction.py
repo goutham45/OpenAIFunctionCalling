@@ -80,6 +80,6 @@ if output['function_call']['name'] == 'getWeather':
         function_call = "auto"
     )
 print("----------------------FINAL REQUEST -------")
-output1 = response2.choices[0].message
+output1 = response2.choices[0].message.content
 # messages1.append(output)
-print(output1.content)
+print(output1)
