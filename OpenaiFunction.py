@@ -8,7 +8,7 @@ load_dotenv()
 openai.api_key = os.getenv("OPEN_AI_KEY")
 messages1 = [
         {"role":"system", "content":"You give very short answers"},
-        {"role":"user", "content":"can you describe the degree in bangalore?"},
+        {"role":"user", "content":"Is it raining in banglore"},
     ]
 function_description = [{
   'name': 'getWeather',
@@ -43,7 +43,7 @@ def getWeather(city):
     
     # Set up the parameters for the API request
     params = {
-        "key": "",
+        "key": os.getenv("Weather_Api"),
         "q": "bengaluru"
     }
 
